@@ -4,5 +4,18 @@
   "description": "Parcel import resolution plugin for eslint-plugin-import.",
   "main": "index.js",
   "author": "ABuffSeagull <reecevanatta@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint index.js --fix"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier": "^1.14.3",
+    "toml": "^2.3.3"
+  },
+  "dependencies": {
+    "resolve": "^1.8.1"
+  }
 }
