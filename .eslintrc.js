@@ -1,4 +1,6 @@
-const toml = require('toml');
-const fs = require('fs');
+const { parse } = require('@iarna/toml');
+const { readFileSync } = require('fs');
 
-module.exports = toml.parse(fs.readFileSync('.eslintrc.toml'));
+const config = parse(readFileSync('.eslintrc.toml'));
+config.rules.indent.push({ SwitchCase: 1 });
+module.exports = config;
