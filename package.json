@@ -9,11 +9,11 @@
     "lint": "eslint index.js --fix"
   },
   "devDependencies": {
+    "@iarna/toml": "^2.2.0",
     "eslint": "^5.8.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "prettier": "^1.14.3",
-    "toml": "^2.3.3"
+    "prettier": "^1.14.3"
   },
   "dependencies": {
     "resolve": "^1.8.1"
