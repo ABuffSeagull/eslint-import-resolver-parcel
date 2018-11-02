@@ -1,6 +1,6 @@
 {
   "name": "eslint-import-resolver-parcel",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Parcel import resolution plugin for eslint-plugin-import.",
   "main": "index.js",
   "author": "ABuffSeagull <reecevanatta@gmail.com>",
