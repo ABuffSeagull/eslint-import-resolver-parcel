@@ -1,6 +1,6 @@
 {
   "name": "eslint-import-resolver-parcel",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Parcel import resolution plugin for eslint-plugin-import.",
   "homepage": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel",
   "bugs": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel/issues",
@@ -9,11 +9,11 @@
   "author": "ABuffSeagull <reecevanatta@gmail.com>",
   "license": "MIT",
   "keywords": [
-  	"parceljs",
-  	"parcel-bundler",
-  	"eslint",
-  	"eslint-import-resolver"
-	],
+    "parceljs",
+    "parcel-bundler",
+    "eslint",
+    "eslint-import-resolver"
+  ],
   "scripts": {
     "lint": "eslint index.js --fix"
   },
