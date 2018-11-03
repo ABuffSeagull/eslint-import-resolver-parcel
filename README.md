@@ -22,7 +22,7 @@ settings: {
 - [x] Relative paths (`import foo from '../foo.js'`)
 - [x] Absolute paths (`import _ from 'lodash'`)
 - [x] Tilde paths (`import foo from '~/foo.js'`)
-- [x] Root paths* (`import foo from '/foo.js')
+- [x] Root paths* (`import foo from '/foo.js'`)
 - [ ] Aliasing
 
 #### *About Root Paths
