@@ -8,6 +8,12 @@
   "main": "index.js",
   "author": "ABuffSeagull <reecevanatta@gmail.com>",
   "license": "MIT",
+  "keywords": [
+  	"parceljs",
+  	"parcel-bundler",
+  	"eslint",
+  	"eslint-import-resolver"
+	],
   "scripts": {
     "lint": "eslint index.js --fix"
   },
