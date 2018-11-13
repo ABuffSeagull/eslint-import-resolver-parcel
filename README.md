@@ -37,3 +37,4 @@ settings: {
   }
 }
 ```
+If not specified, it will assume `process.cwd()` (where `eslint` is called from, probably where the `package.json` is located).
