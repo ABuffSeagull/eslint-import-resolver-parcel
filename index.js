@@ -4,7 +4,18 @@ const { isCore, sync: resolveSync } = require('resolve');
 
 exports.interfaceVersion = 2;
 
-exports.resolve = function resolve(source, file, config) {
+exports.resolve = function(source, file, config) {
+	const hasExtension = /\.(jsx?|vue)$/.test(source);
+	if (hasExtension) return resolve(source, file, config);
+	const extensions = ['.jsx', '.js', '.vue'];
+	for (const extension of extensions) {
+		const result = resolve(source + extension, file, config);
+		if (result.found) return result;
+	}
+	return { found: false };
+};
+
+function resolve(source, file, config) {
 	if (isCore(source)) return { found: true, path: null };
 
 	let rootDir = '';
@@ -29,7 +40,7 @@ exports.resolve = function resolve(source, file, config) {
 	} catch (_) {
 		return { found: false };
 	}
-};
+}
 
 function resolvePackageLevel(source, file) {
 	let packageDir = path.dirname(file);
