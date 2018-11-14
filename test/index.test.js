@@ -1,35 +1,50 @@
 const importResolver = require('../index');
 const path = require('path');
-const { isCore, sync: resolveSync } = require('resolve');
 
 describe('resolve', () => {
-  test('resolves ./test-file.js successfully', () => {
-    const source = './test-file';
-    const file = path.resolve(__dirname + __filename);
-    
-    const expected = {
-      found: true,
-      path: path.resolve(__dirname , 'test-file.js'),
-    }
+	test('resolves ./test-file.js successfully', () => {
+		const source = './test-file';
+		const file = __filename;
 
-    const actual = importResolver.resolve(source, file);
-    
-    expect(actual).toEqual(expected);
-  });
-  test('resolves /test-folder/test-file.js successfully', () => {
-    const source = '/test-folder/test-file';
-    const file = path.resolve(__dirname + __filename);
-    const config = {
-      rootDir: 'test',
-    }
-    
-    const expected = {
-      found: true,
-      path: path.resolve(__dirname + '/test-folder/test-file.js'),
-    }
+		const expected = {
+			found: true,
+			path: path.resolve(__dirname, 'test-file.js'),
+		};
 
-    const actual = importResolver.resolve(source, file,config);
-    
-    expect(actual).toEqual(expected);
-  });
+		const actual = importResolver.resolve(source, file);
+
+		expect(actual).toEqual(expected);
+	});
+	test('resolves /test-folder/test-file.js successfully', () => {
+		const source = '/test-folder/test-file';
+		const file = __filename;
+		const config = {
+			rootDir: 'test',
+		};
+
+		const expected = {
+			found: true,
+			path: path.resolve(__dirname + '/test-folder/test-file.js'),
+		};
+
+		const actual = importResolver.resolve(source, file, config);
+
+		expect(actual).toEqual(expected);
+	});
+	test('resolves another-test-file.ts with extensions successfully', () => {
+		const source = './another-test-file';
+		const file = __filename;
+		const config = {
+			extensions: ['.ts'],
+		};
+
+		const expected = {
+			found: true,
+			path: path.resolve(__dirname + '/another-test-file.ts'),
+		};
+
+		const actual = importResolver.resolve(source, file, config);
+
+		expect(actual).toEqual(expected);
+	});
 });
