@@ -31,10 +31,10 @@ function resolve(source, file, config) {
 			source = resolvePackageLevel(source, file) || rootDir;
 			break;
 
-		case '/':
+    case '/':  
 			source = rootDir + '/' + source;
 			break;
-	}
+  }
 	try {
 		return { found: true, path: resolveSync(source) };
 	} catch (_) {
