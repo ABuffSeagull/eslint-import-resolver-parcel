@@ -2,37 +2,38 @@ const path = require('path');
 const fs = require('fs');
 const { isCore, sync: resolveSync } = require('resolve');
 
-const defaultExtensions = ['.js','.jsx', '.vue'];
+const defaultExtensions = ['.js', '.jsx', '.vue'];
 exports.interfaceVersion = 2;
 
 exports.resolve = function(source, file, config) {
-  if (isCore(source)) return { found: true, path: null };
-  
+	if (isCore(source)) return { found: true, path: null };
+
 	let rootDir = '';
 	if (!!config && !!config.rootDir) rootDir = config.rootDir;
 	rootDir = path.resolve(process.cwd(), rootDir);
-  
+
 	switch (source[0]) {
-    case '.':
-    source = path.dirname(file) + '/' + source; 
-    break;
-    
+		case '.':
+			source = path.dirname(file) + '/' + source;
+			break;
+
 		case '~':
-    source = resolvePackageLevel(source, file) || rootDir;
-    break;
-    
-    case '/':
-    source = rootDir + '/' + source
-    break;
-  }
+			source = resolvePackageLevel(source, file) || rootDir;
+			break;
+
+		case '/':
+			source = rootDir + '/' + source;
+			break;
+	}
 	try {
-    const extensions = config ? config.extensions || defaultExtensions : defaultExtensions;
-		return { 
-      found: true, 
-      path: resolveSync(source, { extensions })
-    };
-	} catch (error) {
-    console.log(error);
+		const extensions = config
+			? config.extensions || defaultExtensions
+			: defaultExtensions;
+		return {
+			found: true,
+			path: resolveSync(source, { extensions }),
+		};
+	} catch (_) {
 		return { found: false };
 	}
 };
