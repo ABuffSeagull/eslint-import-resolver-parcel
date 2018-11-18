@@ -1,4 +1,4 @@
-extends = ["eslint:recommended", "plugin:prettier/recommended"]
+extends = ["eslint:recommended", "plugin:jest/recommended", "plugin:prettier/recommended"]
 
 [env]
 es6 = true
