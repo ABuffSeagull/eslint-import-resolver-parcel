@@ -2,20 +2,10 @@ const path = require('path');
 const fs = require('fs');
 const { isCore, sync: resolveSync } = require('resolve');
 
+const defaultExtensions = ['.js', '.jsx', '.vue'];
 exports.interfaceVersion = 2;
 
 exports.resolve = function(source, file, config) {
-	const hasExtension = /\.(jsx?|vue)$/.test(source);
-	if (hasExtension) return resolve(source, file, config);
-	const extensions = ['.jsx', '.js', '.vue'];
-	for (const extension of extensions) {
-		const result = resolve(source + extension, file, config);
-		if (result.found) return result;
-	}
-	return { found: false };
-};
-
-function resolve(source, file, config) {
 	if (isCore(source)) return { found: true, path: null };
 
 	let rootDir = '';
@@ -36,11 +26,17 @@ function resolve(source, file, config) {
 			break;
 	}
 	try {
-		return { found: true, path: resolveSync(source) };
+		const extensions = config
+			? config.extensions || defaultExtensions
+			: defaultExtensions;
+		return {
+			found: true,
+			path: resolveSync(source, { extensions }),
+		};
 	} catch (_) {
 		return { found: false };
 	}
-}
+};
 
 function resolvePackageLevel(source, file) {
 	let packageDir = path.dirname(file);
