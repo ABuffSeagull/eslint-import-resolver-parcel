@@ -6,7 +6,7 @@ const aliases = require('./package.json').alias;
 const defaultExtensions = ['.js', '.jsx', '.vue'];
 exports.interfaceVersion = 2;
 
-exports.resolve = function(source, file, config) {
+exports.resolve = function(source, file, config = {}) {
 	if (isCore(source)) return { found: true, path: null };
 
 	const foundAlias = Object.keys(aliases)
@@ -22,7 +22,7 @@ exports.resolve = function(source, file, config) {
 		source = source.replace(foundAlias, aliases[foundAlias]);
 	}
 
-	let rootDir = config ? config.rootDir || '' : '';
+	let rootDir = config.rootDir || '';
 	rootDir = path.resolve(process.cwd(), rootDir);
 
 	switch (source[0]) {
@@ -39,8 +39,8 @@ exports.resolve = function(source, file, config) {
 			break;
 	}
 	try {
-		const extensions = config
-			? config.extensions || defaultExtensions
+		const extensions = config.extensions
+			? defaultExtensions.concat(config.extensions)
 			: defaultExtensions;
 		return {
 			found: true,
