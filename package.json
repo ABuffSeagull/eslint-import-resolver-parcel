@@ -1,6 +1,6 @@
 {
   "name": "eslint-import-resolver-parcel",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Parcel import resolution plugin for eslint-plugin-import.",
   "homepage": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel",
   "bugs": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel/issues",
