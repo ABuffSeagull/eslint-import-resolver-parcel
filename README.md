@@ -26,7 +26,7 @@ settings: {
 - [x] Absolute paths (`import _ from 'lodash'`)
 - [x] Tilde paths (`import foo from '~/foo.js'`)
 - [x] Root paths* (`import foo from '/foo.js'`)
-- [ ] Aliasing
+- [x] Aliasing ([parcel docs](https://parceljs.org/module_resolution.html#aliasing))
 
 #### *About Root Paths
 Because root paths require knowledge of the entry points,

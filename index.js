@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const { isCore, sync: resolveSync } = require('resolve');
+const aliases = require('./package.json').alias;
 
 const defaultExtensions = ['.js', '.jsx', '.vue'];
 exports.interfaceVersion = 2;
@@ -8,8 +9,20 @@ exports.interfaceVersion = 2;
 exports.resolve = function(source, file, config) {
 	if (isCore(source)) return { found: true, path: null };
 
-	let rootDir = '';
-	if (!!config && !!config.rootDir) rootDir = config.rootDir;
+	const foundAlias = Object.keys(aliases)
+		.filter(alias => source.startsWith(alias))
+		.reduce(
+			(longestLength, currentLength) =>
+				currentLength.length > longestLength.length
+					? currentLength
+					: longestLength,
+			''
+		);
+	if (foundAlias) {
+		source = source.replace(foundAlias, aliases[foundAlias]);
+	}
+
+	let rootDir = config ? config.rootDir || '' : '';
 	rootDir = path.resolve(process.cwd(), rootDir);
 
 	switch (source[0]) {

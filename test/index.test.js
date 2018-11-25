@@ -59,4 +59,30 @@ describe('resolve', () => {
 		const actual = importResolver.resolve(source, file);
 		expect(actual).toEqual(expected);
 	});
+	test('resolves package alias successfully', () => {
+		const source = 'test-alias';
+		const file = __filename;
+
+		const expected = {
+			found: true,
+			path: path.resolve(
+				__dirname + '/../node_modules/jest/build/jest.js'
+			),
+		};
+
+		const actual = importResolver.resolve(source, file);
+		expect(actual).toEqual(expected);
+	});
+	test('resolves folder alias successfully', () => {
+		const source = 'folder-alias/test-file.js';
+		const file = __filename;
+
+		const expected = {
+			found: true,
+			path: path.resolve(__dirname + '/test-folder/test-file.js'),
+		};
+
+		const actual = importResolver.resolve(source, file);
+		expect(actual).toEqual(expected);
+	});
 });
