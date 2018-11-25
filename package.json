@@ -1,33 +1,37 @@
 {
-  "name": "eslint-import-resolver-parcel",
-  "version": "1.5.2",
-  "description": "Parcel import resolution plugin for eslint-plugin-import.",
-  "homepage": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel",
-  "bugs": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel/issues",
-  "repository": "github:abuffseagull/eslint-import-resolver-parcel",
-  "main": "index.js",
-  "author": "ABuffSeagull <reecevanatta@gmail.com>",
-  "license": "MIT",
-  "keywords": [
-    "parceljs",
-    "parcel-bundler",
-    "eslint",
-    "eslint-import-resolver"
-  ],
-  "scripts": {
-    "lint": "eslint --ext .js index.js test/ --fix",
-    "test": "jest"
-  },
-  "devDependencies": {
-    "@iarna/toml": "^2.2.0",
-    "eslint": "^5.8.0",
-    "eslint-config-prettier": "^3.1.0",
-    "eslint-plugin-jest": "^22.0.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "jest": "^23.6.0",
-    "prettier": "^1.14.3"
-  },
-  "dependencies": {
-    "resolve": "^1.8.1"
-  }
+	"name": "eslint-import-resolver-parcel",
+	"version": "1.5.2",
+	"description": "Parcel import resolution plugin for eslint-plugin-import.",
+	"homepage": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel",
+	"bugs": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel/issues",
+	"repository": "github:abuffseagull/eslint-import-resolver-parcel",
+	"main": "index.js",
+	"author": "ABuffSeagull <reecevanatta@gmail.com>",
+	"license": "MIT",
+	"keywords": [
+		"parceljs",
+		"parcel-bundler",
+		"eslint",
+		"eslint-import-resolver"
+	],
+	"scripts": {
+		"lint": "eslint --ext .js index.js test/ --fix",
+		"test": "jest"
+	},
+	"devDependencies": {
+		"@iarna/toml": "^2.2.0",
+		"eslint": "^5.8.0",
+		"eslint-config-prettier": "^3.1.0",
+		"eslint-plugin-jest": "^22.0.0",
+		"eslint-plugin-prettier": "^3.0.0",
+		"jest": "^23.6.0",
+		"prettier": "^1.14.3"
+	},
+	"dependencies": {
+		"resolve": "^1.8.1"
+	},
+	"alias": {
+		"folder-alias": "./test-folder",
+		"test-alias": "jest"
+	}
 }
