@@ -47,4 +47,16 @@ describe('resolve', () => {
 
 		expect(actual).toEqual(expected);
 	});
+	test('resolves index file inside directory successfully', () => {
+		const source = './test-folder';
+		const file = __filename;
+
+		const expected = {
+			found: true,
+			path: path.resolve(__dirname + '/test-folder/index.js'),
+		};
+
+		const actual = importResolver.resolve(source, file);
+		expect(actual).toEqual(expected);
+	});
 });
