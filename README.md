@@ -1,5 +1,7 @@
 # eslint-import-resolver-parcel
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ABuffSeagull/eslint-import-resolver-parcel.svg)](https://greenkeeper.io/)
+
 ### About
 Parcel import resolution plugin for eslint-plugin-import.
 This allows for [eslint/import](https://github.com/benmosher/eslint-plugin-import)
