@@ -64,4 +64,4 @@ settings: {
 }
 ```
 
-Current default extensions are `.js`, `.jsx`, and `.vue`. (See [Issue #9](https://github.com/ABuffSeagull/eslint-import-resolver-parcel/issues/9))
+Current default extensions are `.js` and `.jsx`.

@@ -16,7 +16,8 @@
 	],
 	"scripts": {
 		"lint": "eslint --ext .js index.js test/ --fix",
-		"test": "jest"
+		"test": "jest",
+		"stryker": "stryker run"
 	},
 	"devDependencies": {
 		"@iarna/toml": "^2.2.0",
@@ -25,13 +26,20 @@
 		"eslint-plugin-jest": "^22.0.0",
 		"eslint-plugin-prettier": "^3.0.0",
 		"jest": "^23.6.0",
-		"prettier": "^1.14.3"
+		"prettier": "^1.14.3",
+		"stryker": "^0.32.1",
+		"stryker-api": "^0.21.5",
+		"stryker-html-reporter": "^0.16.7",
+		"stryker-javascript-mutator": "^0.11.5",
+		"stryker-jest-runner": "^1.2.7"
 	},
 	"dependencies": {
 		"resolve": "^1.8.1"
 	},
 	"alias": {
 		"folder-alias": "./test-folder",
-		"test-alias": "jest"
+		"test-alias": "jest",
+		"foo": "bar",
+		"foobar": "jest"
 	}
 }
