@@ -3,24 +3,15 @@ const fs = require('fs');
 const { isCore, sync: resolveSync } = require('resolve');
 const aliases = require('./package.json').alias;
 
-const defaultExtensions = ['.js', '.jsx', '.vue'];
+const defaultExtensions = ['.js']; // apparently looks for .jsx included with .js
 exports.interfaceVersion = 2;
 
 exports.resolve = function(source, file, config = {}) {
 	if (isCore(source)) return { found: true, path: null };
 
-	const foundAlias = Object.keys(aliases)
-		.filter(alias => source.startsWith(alias))
-		.reduce(
-			(longestLength, currentLength) =>
-				currentLength.length > longestLength.length
-					? currentLength
-					: longestLength,
-			''
-		);
-	if (foundAlias) {
-		source = source.replace(foundAlias, aliases[foundAlias]);
-	}
+	const [startSource] = source.split('/');
+	const foundAlias = Object.keys(aliases).find(alias => alias == startSource);
+	if (foundAlias) source = source.replace(foundAlias, aliases[foundAlias]);
 
 	let rootDir = config.rootDir || '';
 	rootDir = path.resolve(process.cwd(), rootDir);
@@ -35,16 +26,15 @@ exports.resolve = function(source, file, config = {}) {
 			break;
 
 		case '/':
-			source = rootDir + '/' + source;
+			source = rootDir + source;
 			break;
 	}
 	try {
-		const extensions = config.extensions
-			? defaultExtensions.concat(config.extensions)
-			: defaultExtensions;
 		return {
 			found: true,
-			path: resolveSync(source, { extensions }),
+			path: resolveSync(source, {
+				extensions: defaultExtensions.concat(config.extensions),
+			}),
 		};
 	} catch (_) {
 		return { found: false };
@@ -63,5 +53,5 @@ function resolvePackageLevel(source, file) {
 			packageDir = path.resolve(packageDir, '..');
 		}
 	} while (!isFound);
-	return packageDir + '/' + source.substring(1); // get rid of the tilde
+	return packageDir + source.substring(1); // get rid of the tilde
 }
