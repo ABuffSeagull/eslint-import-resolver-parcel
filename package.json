@@ -36,7 +36,7 @@
 		"@pika/plugin-standard-pkg": "^0.3.12"
 	},
 	"dependencies": {
-		"resolve": "^1.8.1"
+		"resolve": "^1.10.0"
 	},
 	"alias": {
 		"folder-alias": "./test-folder",
