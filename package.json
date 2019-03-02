@@ -5,7 +5,7 @@
 	"homepage": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel",
 	"bugs": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel/issues",
 	"repository": "github:abuffseagull/eslint-import-resolver-parcel",
-	"main": "index.js",
+	"main": "src/index.js",
 	"author": "ABuffSeagull <reecevanatta@gmail.com>",
 	"license": "MIT",
 	"keywords": [
@@ -15,7 +15,7 @@
 		"eslint-import-resolver"
 	],
 	"scripts": {
-		"lint": "eslint --ext .js index.js test/ --fix",
+		"lint": "eslint --ext .js src/index.js test/ --fix",
 		"test": "jest",
 		"stryker": "stryker run"
 	},
@@ -31,7 +31,9 @@
 		"stryker-api": "^0.21.5",
 		"stryker-html-reporter": "^0.16.7",
 		"stryker-javascript-mutator": "^0.11.5",
-		"stryker-jest-runner": "^1.2.7"
+		"stryker-jest-runner": "^1.2.7",
+		"@pika/plugin-build-node": "^0.3.12",
+		"@pika/plugin-standard-pkg": "^0.3.12"
 	},
 	"dependencies": {
 		"resolve": "^1.8.1"
@@ -41,5 +43,15 @@
 		"test-alias": "jest",
 		"foo": "bar",
 		"foobar": "jest"
+	},
+	"@pika/pack": {
+		"pipeline": [
+			[
+				"@pika/plugin-standard-pkg"
+			],
+			[
+				"@pika/plugin-build-node"
+			]
+		]
 	}
 }
