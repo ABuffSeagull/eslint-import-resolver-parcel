@@ -3,7 +3,7 @@ const fs = require('fs');
 const { isCore, sync: resolveSync } = require('resolve');
 const aliases = require('../package.json').alias || {};
 
-const defaultExtensions = ['.js']; // apparently looks for .jsx included with .js
+const defaultExtensions = ['.js', '.jsx'];
 exports.interfaceVersion = 2;
 
 exports.resolve = function(source, file, config = {}) {
