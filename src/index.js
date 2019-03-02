@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const { isCore, sync: resolveSync } = require('resolve');
-const aliases = require('../package.json').alias;
+const aliases = require('../package.json').alias || {};
 
 const defaultExtensions = ['.js']; // apparently looks for .jsx included with .js
 exports.interfaceVersion = 2;
