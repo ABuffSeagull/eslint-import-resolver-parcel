@@ -1,4 +1,4 @@
-const importResolver = require('../index');
+const importResolver = require('../src/index');
 const path = require('path');
 const fs = require('fs');
 
@@ -54,12 +54,12 @@ describe('package level', () => {
 	});
 
 	test('resolves ~/index.js with outer node_modules', () => {
-		const source = '~/index';
+		const source = '~/package-test-file';
 		const file = __filename;
 
 		const expected = {
 			found: true,
-			path: path.resolve(__dirname, '..', 'index.js'),
+			path: path.resolve(__dirname, '..', 'package-test-file.js'),
 		};
 
 		const actual = importResolver.resolve(source, file);
@@ -68,12 +68,12 @@ describe('package level', () => {
 	});
 
 	test('resolves ~/index.js with outer node_modules inside test-folder', () => {
-		const source = '~/index';
+		const source = '~/package-test-file';
 		const file = path.resolve(__dirname, 'test-folder', 'index.js');
 
 		const expected = {
 			found: true,
-			path: path.resolve(__dirname, '..', 'index.js'),
+			path: path.resolve(__dirname, '..', 'package-test-file.js'),
 		};
 
 		const actual = importResolver.resolve(source, file);

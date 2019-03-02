@@ -6,6 +6,6 @@ module.exports = function(config) {
     testRunner: "jest",
     transpilers: [],
     coverageAnalysis: "off",
-    mutate: ["index.js"]
+    mutate: ["src/index.js"]
   });
 };
