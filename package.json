@@ -1,6 +1,6 @@
 {
 	"name": "eslint-import-resolver-parcel",
-	"version": "1.7.0",
+	"version": "1.8.0",
 	"description": "Parcel import resolution plugin for eslint-plugin-import.",
 	"homepage": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel",
 	"bugs": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel/issues",
@@ -20,23 +20,23 @@
 		"stryker": "stryker run"
 	},
 	"devDependencies": {
-		"@iarna/toml": "^2.2.0",
-		"eslint": "^5.8.0",
-		"eslint-config-prettier": "^3.1.0",
-		"eslint-plugin-jest": "^22.0.0",
-		"eslint-plugin-prettier": "^3.0.0",
-		"jest": "^23.6.0",
-		"prettier": "^1.14.3",
-		"stryker": "^0.32.1",
-		"stryker-api": "^0.21.5",
-		"stryker-html-reporter": "^0.16.7",
-		"stryker-javascript-mutator": "^0.11.5",
-		"stryker-jest-runner": "^1.2.7",
+		"@iarna/toml": "^2.2.1",
 		"@pika/plugin-build-node": "^0.3.12",
-		"@pika/plugin-standard-pkg": "^0.3.12"
+		"@pika/plugin-standard-pkg": "^0.3.12",
+		"eslint": "^5.13.0",
+		"eslint-config-prettier": "^4.0.0",
+		"eslint-plugin-jest": "^22.2.2",
+		"eslint-plugin-prettier": "^3.0.1",
+		"jest": "^24.1.0",
+		"prettier": "^1.16.4",
+		"stryker": "^0.35.0",
+		"stryker-api": "^0.24.0",
+		"stryker-html-reporter": "^0.18.0",
+		"stryker-javascript-mutator": "^0.14.0",
+		"stryker-jest-runner": "^1.4.0"
 	},
 	"dependencies": {
-		"resolve": "^1.8.1"
+		"resolve": "^1.10.0"
 	},
 	"alias": {
 		"folder-alias": "./test-folder",
