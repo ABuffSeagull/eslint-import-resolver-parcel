@@ -32,6 +32,7 @@ settings: {
 -   [x] Tilde paths (`import foo from '~/foo.js'`)
 -   [x] Root paths\* (`import foo from '/foo.js'`)
 -   [x] Aliasing ([parcel docs](https://parceljs.org/module_resolution.html#aliasing))
+-   [ ] Glob Paths ([parcel docs](https://parceljs.org/module_resolution.html#glob-file-paths))
 
 #### \*About Root Paths
 
