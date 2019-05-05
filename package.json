@@ -20,15 +20,17 @@
 		"stryker": "stryker run"
 	},
 	"devDependencies": {
+		"@abuffseagull/eslint-config-node": "^3.0.0",
+		"@babel/core": "^7.4.4",
+		"@babel/preset-env": "^7.4.4",
 		"@iarna/toml": "^2.2.1",
 		"@pika/plugin-build-node": "^0.3.14",
 		"@pika/plugin-standard-pkg": "^0.3.14",
+		"babel-jest": "^24.8.0",
 		"eslint": "^5.15.2",
-		"eslint-config-prettier": "^4.0.0",
+		"eslint-formatter-kakoune": "^1.0.0",
 		"eslint-plugin-jest": "^22.4.1",
-		"eslint-plugin-prettier": "^3.0.1",
 		"jest": "^24.5.0",
-		"prettier": "^1.16.4",
 		"stryker": "^0.35.0",
 		"stryker-api": "^0.24.0",
 		"stryker-html-reporter": "^0.18.0",
@@ -50,7 +52,7 @@
 				"@pika/plugin-standard-pkg"
 			],
 			[
-				"@pika/plugin-build-node"
+				"@pika/plugin-build-node", { "minNodeVersion": 8 }
 			]
 		]
 	}
