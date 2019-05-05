@@ -2,24 +2,23 @@
 # yarn lockfile v1
 
 
-"@abuffseagull/eslint-config-base@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@abuffseagull/eslint-config-base/-/eslint-config-base-3.0.0.tgz#36b359ef3baeac0e7841269b564ef5e1f83ae5f4"
-  integrity sha512-MPbpsnhM9bZ5TY2SrTsAG9VjIY/aOVEbIRHMzo1d+JeQKdONAiKfCDNLmjnfvjSV2SL/tr96lCjuFVqdUWA24g==
+"@abuffseagull/eslint-config-base@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@abuffseagull/eslint-config-base/-/eslint-config-base-4.0.0.tgz#7f0067b7a0b49a7724b197c7a76aa198c414f12f"
+  integrity sha512-5ThIKxol6qmd4uPuJ6h0iEl+s8SClCPjlV39pJqwQY6k8RY1trMiq3OM0BjJpwdKt2uc1CX0nrLmu5wm7caVjA==
   dependencies:
     "@getify/eslint-plugin-proper-arrows" "^8.0.1"
-    "@getify/eslint-plugin-proper-ternary" "^3.0.1"
     eslint-plugin-import "^2.17.2"
     eslint-plugin-promise "^4.1.1"
     eslint-plugin-unicorn "^8.0.2"
     eslint-plugin-you-dont-need-lodash-underscore "^6.4.0"
 
-"@abuffseagull/eslint-config-node@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@abuffseagull/eslint-config-node/-/eslint-config-node-3.0.0.tgz#93301a6cba63ad51ba3007b24c4f5049f37e6f4a"
-  integrity sha512-N8qhKk12EIkiglRYuUzt/gZdAA1SM9gAx65I/kd/5xHpsx5tE4WDMw+31SNt20veQSa4+XJU7IodRLZrfqIlpQ==
+"@abuffseagull/eslint-config-node@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@abuffseagull/eslint-config-node/-/eslint-config-node-4.0.0.tgz#226213f14f17c9156a5a4b210562c6d7c0f5de08"
+  integrity sha512-gXaJZEnX8rTqcga/2gwm3AmoXyI9/QcanZqKUvfaxfxtkJwOdDZANsdgKsy5QnsIP+3DUTThhVMb4n8n87wDHA==
   dependencies:
-    "@abuffseagull/eslint-config-base" "^3.0.0"
+    "@abuffseagull/eslint-config-base" "^4.0.0"
     eslint-config-unicorn "^0.5.0"
     eslint-plugin-node "^9.0.1"
 
@@ -50,7 +49,7 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/generator@^7.0.0", "@babel/generator@^7.4.0", "@babel/generator@^7.4.4":
+"@babel/generator@^7.0.0", "@babel/generator@^7.2.2", "@babel/generator@^7.4.0", "@babel/generator@^7.4.4":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.4.4.tgz#174a215eb843fc392c7edcaabeaa873de6e8f041"
   integrity sha512-53UOLK6TVNqKxf7RUh8NE851EHRxOOeVXKbK2bivdb+iziMyk03Sr4eaE9OELCbyZAAafAKPDwF2TPUES5QbxQ==
@@ -61,7 +60,7 @@
     source-map "^0.5.0"
     trim-right "^1.0.1"
 
-"@babel/generator@^7.2.2", "@babel/generator@~7.3.2":
+"@babel/generator@~7.3.2":
   version "7.3.4"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.3.4.tgz#9aa48c1989257877a9d971296e5b73bfe72e446e"
   integrity sha512-8EXhHRFqlVVWXPezBW5keTiQi/rJMQTg/Y9uVCEZ0CAF3PKtCCaVRnp64Ii1ujhkoDhhF1fVsImoN4yJ2uz4Wg==
@@ -245,12 +244,12 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.0.0", "@babel/parser@^7.1.0", "@babel/parser@^7.1.5", "@babel/parser@^7.4.3", "@babel/parser@^7.4.4":
+"@babel/parser@^7.0.0", "@babel/parser@^7.1.0", "@babel/parser@^7.1.5", "@babel/parser@^7.2.3", "@babel/parser@^7.4.3", "@babel/parser@^7.4.4":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.4.4.tgz#5977129431b8fe33471730d255ce8654ae1250b6"
   integrity sha512-5pCS4mOsL+ANsFZGdvNLybx4wtqAZJ0MJjMHxvzI3bvIsz6sQvzW8XX92EYIkiPtIvcfG3Aj+Ir5VNyjnZhP7w==
 
-"@babel/parser@^7.2.3", "@babel/parser@~7.3.1":
+"@babel/parser@~7.3.1":
   version "7.3.4"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.3.4.tgz#a43357e4bbf4b92a437fb9e465c192848287f27c"
   integrity sha512-tXZCqWtlOOP4wgCp6RjRvLmfuhnqTLy9VHwRochJBCP2nDm27JnnuFEnXFASVyQNHk36jD1tAammsCEEqgscIQ==
@@ -719,11 +718,6 @@
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/@getify/eslint-plugin-proper-arrows/-/eslint-plugin-proper-arrows-8.0.1.tgz#478ebf109d792f634a3449684328520161989366"
   integrity sha512-S8VIdlc321iexhGa8BX55jHdlvJwW/9hTZawxidXoi8tecpi6k5tpOcExv3xXMPFuWrRu+hrS03mVRxkxHNeyw==
-
-"@getify/eslint-plugin-proper-ternary@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@getify/eslint-plugin-proper-ternary/-/eslint-plugin-proper-ternary-3.0.1.tgz#4729443416004f5fd3a5241f860c01323ce597a2"
-  integrity sha512-/71MVVsLhHVYs59h0az6tZlUWWzLeKNnDGML0CCvoQ4hx37sMdSL82A3+QzJIFj3gRylvGhszn5k82E+mM6HSg==
 
 "@iarna/toml@^2.2.1":
   version "2.2.3"
@@ -2723,7 +2717,7 @@ isstream@~0.1.2:
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
-istanbul-lib-coverage@^2.0.2, istanbul-lib-coverage@^2.0.3, istanbul-lib-coverage@^2.0.5:
+istanbul-lib-coverage@^2.0.2, istanbul-lib-coverage@^2.0.4, istanbul-lib-coverage@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.5.tgz#675f0ab69503fad4b1d849f736baaca803344f49"
   integrity sha512-8aXznuEPCJvGnMSRft4udDRDtb1V3pkQkMMI5LI+6HuQz5oQ4J2UFn1H82raA3qJtyOLkkwVqICBQkjnGtn5mA==
@@ -2742,17 +2736,17 @@ istanbul-lib-instrument@^3.0.1, istanbul-lib-instrument@^3.3.0:
     semver "^6.0.0"
 
 istanbul-lib-instrument@~3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/istanbul-lib-instrument/-/istanbul-lib-instrument-3.1.0.tgz#a2b5484a7d445f1f311e93190813fa56dfb62971"
-  integrity sha512-ooVllVGT38HIk8MxDj/OIHXSYvH+1tq/Vb38s8ixt9GoJadXska4WkGY+0wkmtYCZNYtaARniH/DixUGGLZ0uA==
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/istanbul-lib-instrument/-/istanbul-lib-instrument-3.1.2.tgz#5e827c0e93ef2f7a89bbbb83a67d5c4843593f2b"
+  integrity sha512-5OCdsY81MIHduQqGs5k9JTkOioROzpl3r2PSdkh+1C3j5WxtRWhyhgxMv7wRuEsPsg4K0M9OVWtJ045lyBN73Q==
   dependencies:
     "@babel/generator" "^7.0.0"
     "@babel/parser" "^7.0.0"
     "@babel/template" "^7.0.0"
     "@babel/traverse" "^7.0.0"
     "@babel/types" "^7.0.0"
-    istanbul-lib-coverage "^2.0.3"
-    semver "^5.5.0"
+    istanbul-lib-coverage "^2.0.4"
+    semver "^6.0.0"
 
 istanbul-lib-report@^2.0.4:
   version "2.0.8"
@@ -4700,9 +4694,9 @@ stealthy-require@^1.1.1:
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
 streamroller@^1.0.1:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/streamroller/-/streamroller-1.0.3.tgz#cb51e7e382f799a9381a5d7490ce3053b325fba3"
-  integrity sha512-P7z9NwP51EltdZ81otaGAN3ob+/F88USJE546joNq7bqRNTe6jc74fTBDyynxP4qpIfKlt/CesEYicuMzI0yJg==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/streamroller/-/streamroller-1.0.4.tgz#d485c7624796d5e2eb34190c79afcbf006afb5e6"
+  integrity sha512-Wc2Gm5ygjSX8ZpW9J7Y9FwiSzTlKSvcl0FTTMd3rn7RoxDXpBW+xD9TY5sWL2n0UR61COB0LG1BQvN6nTUQbLQ==
   dependencies:
     async "^2.6.1"
     date-format "^2.0.0"
