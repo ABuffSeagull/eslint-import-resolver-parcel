@@ -1,57 +1,70 @@
-const path = require('path');
-const fs = require('fs');
-const { isCore, sync: resolveSync } = require('resolve');
-const aliases = require('../package.json').alias || {};
+/* eslint-disable no-sync */
+import path from 'path';
+import fs from 'fs';
+import { isCore, sync as resolveSync } from 'resolve';
 
 const defaultExtensions = ['.js', '.jsx'];
-exports.interfaceVersion = 2;
+export const interfaceVersion = 2;
 
-exports.resolve = function(source, file, config = {}) {
-	if (isCore(source)) return { found: true, path: null };
+export function resolve(source, file, possibleConfig) {
+  if (isCore(source)) return { found: true, path: null };
+  const config = { rootDir: '', extensions: [] };
+  if (possibleConfig) Object.assign(config, possibleConfig);
 
-	const [startSource] = source.split('/');
-	const foundAlias = Object.keys(aliases).find(alias => alias == startSource);
-	if (foundAlias) source = source.replace(foundAlias, aliases[foundAlias]);
+  const [startSource] = source.split('/');
+  const aliases = findAliases();
+  const foundAlias = Object.keys(aliases).find(alias => alias == startSource);
 
-	let rootDir = config.rootDir || '';
-	rootDir = path.resolve(process.cwd(), rootDir);
+  let newSource = source.replace(foundAlias, aliases[foundAlias]);
 
-	switch (source[0]) {
-		case '.':
-			source = path.dirname(file) + '/' + source;
-			break;
+  const rootDir = path.join(process.cwd(), config.rootDir);
 
-		case '~':
-			source = resolvePackageLevel(source, file) || rootDir;
-			break;
+  switch (newSource[0]) {
+    case '.':
+      newSource = path.join(path.dirname(file), newSource);
+      break;
 
-		case '/':
-			source = rootDir + source;
-			break;
-	}
-	try {
-		return {
-			found: true,
-			path: resolveSync(source, {
-				extensions: defaultExtensions.concat(config.extensions),
-			}),
-		};
-	} catch (_) {
-		return { found: false };
-	}
-};
+    case '~':
+      newSource = resolvePackageLevel(newSource, file) || rootDir;
+      break;
+
+    case '/':
+      newSource = path.join(rootDir, newSource);
+      break;
+
+    // no default
+  }
+  try {
+    return {
+      found: true,
+      path: resolveSync(newSource, {
+        basedir: process.cwd(),
+        extensions: [...defaultExtensions, ...config.extensions],
+      }),
+    };
+  } catch (_) {
+    return { found: false };
+  }
+}
+
+function findAliases() {
+  let currentPath = process.cwd();
+  let packagePath = path.join(currentPath, 'package.json');
+  while (!fs.existsSync(packagePath)) {
+    currentPath = path.join(currentPath, '..');
+    packagePath = path.join(currentPath, 'package.json');
+  }
+  const packageJson = fs.readFileSync(packagePath);
+  return JSON.parse(packageJson).alias || {};
+}
 
 function resolvePackageLevel(source, file) {
-	let packageDir = path.dirname(file);
-	let isFound = false;
-	do {
-		if (fs.existsSync(packageDir + '/node_modules')) {
-			isFound = true;
-		} else if (path.parse(packageDir).root == packageDir) {
-			return null; // reached the root, just return null
-		} else {
-			packageDir = path.resolve(packageDir, '..');
-		}
-	} while (!isFound);
-	return packageDir + source.substring(1); // get rid of the tilde
+  let packageDir = path.dirname(file);
+  let isFound = false;
+  do {
+    if (fs.existsSync(path.resolve(packageDir, 'node_modules'))) isFound = true;
+    else if (path.parse(packageDir).root == packageDir) return null; // reached the root, just return null
+    else packageDir = path.join(packageDir, '..');
+  } while (!isFound);
+  return path.join(packageDir, source.substring(1)); // get rid of the tilde
 }
