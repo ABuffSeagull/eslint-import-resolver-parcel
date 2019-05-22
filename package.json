@@ -52,10 +52,7 @@
 				"@pika/plugin-standard-pkg"
 			],
 			[
-				"@pika/plugin-build-node",
-				{
-					"minNodeVersion": 8
-				}
+				"@pika/plugin-build-node"
 			]
 		]
 	}
