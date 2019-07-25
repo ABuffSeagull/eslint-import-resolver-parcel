@@ -24,7 +24,7 @@
 		"@babel/core": "^7.4.4",
 		"@babel/preset-env": "^7.4.4",
 		"@iarna/toml": "^2.2.1",
-		"@pika/plugin-build-node": "^0.4.0",
+		"@pika/plugin-build-node": "^0.5.1",
 		"@pika/plugin-standard-pkg": "^0.4.0",
 		"babel-jest": "^24.8.0",
 		"eslint": "^5.15.2",
