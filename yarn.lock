@@ -933,6 +933,11 @@
     "@types/node" "^10.12.18"
     standard-pkg "^0.4.0"
 
+"@pika/types@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.5.1.tgz#e1dca2cf59019754669efbb0d71e7c7c06774e78"
+  integrity sha512-ZJPiRuSiylqlRcRBPaT9DdENXKqBXXtzNdKLc7ftvAg/d9y7V+mdgZ8lnN6/e0We7h2K0F0IzKscTTqycjiLRg==
+
 "@stryker-mutator/api@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@stryker-mutator/api/-/api-2.0.2.tgz#d0278a417fae22414707fd86b456ca1fc9830267"
