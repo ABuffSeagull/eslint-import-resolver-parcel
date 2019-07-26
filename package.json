@@ -1,6 +1,6 @@
 {
 	"name": "eslint-import-resolver-parcel",
-	"version": "1.8.3",
+	"version": "1.9.0",
 	"description": "Parcel import resolution plugin for eslint-plugin-import.",
 	"homepage": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel",
 	"bugs": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel/issues",
@@ -20,6 +20,9 @@
 		"stryker": "stryker run"
 	},
 	"devDependencies": {
+		"@abuffseagull/eslint-config-node": "^4.0.0",
+		"@babel/core": "^7.4.4",
+		"@babel/preset-env": "^7.4.4",
 		"@iarna/toml": "^2.2.1",
 		"@pika/plugin-build-node": "^0.5.1",
 		"@pika/plugin-standard-pkg": "^0.5.1",
@@ -28,11 +31,10 @@
 		"@stryker-mutator/javascript-mutator": "^2.0.2",
 		"@stryker-mutator/jest-runner": "^2.0.2",
 		"eslint": "^6.1.0",
-		"eslint-config-prettier": "^6.0.0",
 		"eslint-plugin-jest": "^22.13.7",
-		"eslint-plugin-prettier": "^3.1.0",
 		"jest": "^24.8.0",
-		"prettier": "^1.18.2"
+		"babel-jest": "^24.8.0",
+		"eslint-formatter-kakoune": "^1.0.0"
 	},
 	"dependencies": {
 		"resolve": "^1.11.1"
@@ -48,13 +50,6 @@
 		"lodash.defaultsdeep": "^4.6.1"
 	},
 	"@pika/pack": {
-		"pipeline": [
-			[
-				"@pika/plugin-standard-pkg"
-			],
-			[
-				"@pika/plugin-build-node"
-			]
-		]
+		"pipeline": [["@pika/plugin-standard-pkg"], ["@pika/plugin-build-node"]]
 	}
 }
