@@ -25,7 +25,7 @@
 		"@babel/core": "^7.4.4",
 		"@babel/preset-env": "^7.4.4",
 		"@iarna/toml": "^2.2.1",
-		"@pika/plugin-build-node": "^0.5.1",
+		"@pika/plugin-build-node": "^0.6.0",
 		"@pika/plugin-standard-pkg": "^0.5.1",
 		"@pika/types": "^0.5.1",
 		"@stryker-mutator/core": "^2.0.2",
