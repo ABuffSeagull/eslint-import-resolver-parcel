@@ -48,17 +48,9 @@
 		"foobar": "jest"
 	},
 	"resolutions": {
-		"lodash": "^4.17.13",
-		"lodash.defaultsdeep": "^4.6.1"
+		"set-value": "^2.0.1"
 	},
 	"@pika/pack": {
-		"pipeline": [
-			[
-				"@pika/plugin-standard-pkg"
-			],
-			[
-				"@pika/plugin-build-node"
-			]
-		]
+		"pipeline": [["@pika/plugin-standard-pkg"], ["@pika/plugin-build-node"]]
 	}
 }
