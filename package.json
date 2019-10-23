@@ -27,7 +27,7 @@
 		"@iarna/toml": "^2.2.1",
 		"@pika/pack": "^0.5.0",
 		"@pika/plugin-build-node": "^0.7.0",
-		"@pika/plugin-standard-pkg": "^0.6.0",
+		"@pika/plugin-standard-pkg": "^0.7.0",
 		"@stryker-mutator/core": "^2.1.0",
 		"@stryker-mutator/html-reporter": "^2.1.0",
 		"@stryker-mutator/javascript-mutator": "^2.1.0",
