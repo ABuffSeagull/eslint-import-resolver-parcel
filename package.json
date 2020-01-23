@@ -35,7 +35,7 @@
 		"babel-jest": "^24.9.0",
 		"eslint": "^6.4.0",
 		"eslint-formatter-kakoune": "^1.0.0",
-		"eslint-plugin-jest": "^22.17.0",
+		"eslint-plugin-jest": "^23.0.0",
 		"jest": "^24.9.0"
 	},
 	"dependencies": {
