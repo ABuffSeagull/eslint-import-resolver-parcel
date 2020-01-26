@@ -22,24 +22,24 @@
 	},
 	"devDependencies": {
 		"@abuffseagull/eslint-config-node": "^4.0.2",
-		"@babel/core": "^7.6.0",
-		"@babel/preset-env": "^7.6.0",
+		"@babel/core": "^7.8.3",
+		"@babel/preset-env": "^7.8.3",
 		"@iarna/toml": "^2.2.1",
 		"@pika/pack": "^0.5.0",
-		"@pika/plugin-build-node": "^0.6.0",
-		"@pika/plugin-standard-pkg": "^0.6.0",
-		"@stryker-mutator/core": "^2.1.0",
-		"@stryker-mutator/html-reporter": "^2.1.0",
-		"@stryker-mutator/javascript-mutator": "^2.1.0",
-		"@stryker-mutator/jest-runner": "^2.1.0",
-		"babel-jest": "^24.9.0",
-		"eslint": "^6.4.0",
+		"@pika/plugin-build-node": "^0.8.1",
+		"@pika/plugin-standard-pkg": "^0.8.1",
+		"@stryker-mutator/core": "^2.5.0",
+		"@stryker-mutator/html-reporter": "^2.5.0",
+		"@stryker-mutator/javascript-mutator": "^2.5.0",
+		"@stryker-mutator/jest-runner": "^2.5.0",
+		"babel-jest": "^25.1.0",
+		"eslint": "^6.8.0",
 		"eslint-formatter-kakoune": "^1.0.0",
-		"eslint-plugin-jest": "^23.0.0",
-		"jest": "^24.9.0"
+		"eslint-plugin-jest": "^23.6.0",
+		"jest": "^25.1.0"
 	},
 	"dependencies": {
-		"resolve": "^1.12.0"
+		"resolve": "^1.15.0"
 	},
 	"alias": {
 		"folder-alias": "./test-folder",
@@ -48,7 +48,8 @@
 		"foobar": "jest"
 	},
 	"resolutions": {
-		"set-value": "^2.0.1"
+		"set-value": "^2.0.1",
+		"tree-kill": "^1.2.2"
 	},
 	"@pika/pack": {
 		"pipeline": [
