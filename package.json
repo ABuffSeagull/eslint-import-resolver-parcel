@@ -21,7 +21,6 @@
 		"version": "npx @pika/pack build"
 	},
 	"devDependencies": {
-		"@abuffseagull/eslint-config-node": "^4.0.2",
 		"@babel/core": "^7.8.3",
 		"@babel/preset-env": "^7.8.3",
 		"@iarna/toml": "^2.2.1",
@@ -33,10 +32,15 @@
 		"@stryker-mutator/javascript-mutator": "^2.5.0",
 		"@stryker-mutator/jest-runner": "^2.5.0",
 		"babel-jest": "^25.1.0",
-		"eslint": "^6.8.0",
+		"eslint": "6.1.0",
+		"eslint-config-airbnb-base": "14.0.0",
+		"eslint-config-prettier": "^6.9.0",
 		"eslint-formatter-kakoune": "^1.0.0",
+		"eslint-plugin-import": "^2.18.2",
 		"eslint-plugin-jest": "^23.6.0",
-		"jest": "^25.1.0"
+		"eslint-plugin-prettier": "^3.1.2",
+		"jest": "^25.1.0",
+		"prettier": "^1.19.1"
 	},
 	"dependencies": {
 		"resolve": "^1.15.0"
