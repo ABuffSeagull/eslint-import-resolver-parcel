@@ -1,7 +1,7 @@
 /* eslint-disable no-sync */
 const path = require('path');
 const fs = require('fs');
-const importResolver = require('../src/index.js');
+const importResolver = require('../src');
 
 describe('root level', () => {
   test('resolves /test-folder/test-file.js successfully with specifying root dir', () => {
@@ -38,8 +38,8 @@ describe('package level', () => {
     const source = '~/test-file';
     const file = __filename;
 
-    const nodeDir = path.resolve(__dirname, 'node_modules');
-    fs.mkdirSync(nodeDir);
+    const nodeDirectory = path.resolve(__dirname, 'node_modules');
+    fs.mkdirSync(nodeDirectory);
 
     const expected = {
       found: true,
@@ -48,7 +48,7 @@ describe('package level', () => {
 
     const actual = importResolver.resolve(source, file);
 
-    fs.rmdirSync(nodeDir);
+    fs.rmdirSync(nodeDirectory);
     expect(actual).toEqual(expected);
   });
 
@@ -77,6 +77,20 @@ describe('package level', () => {
 
     const actual = importResolver.resolve(source, file);
 
+    expect(actual).toEqual(expected);
+  });
+
+  test('resolves the rootDir first', () => {
+    const source = '~/test-file';
+    const file = __filename;
+    const config = { rootDir: 'test/test-folder/' };
+
+    const expected = {
+      found: true,
+      path: path.resolve(__dirname, 'test-folder/test-file.js'),
+    };
+
+    const actual = importResolver.resolve(source, file, config);
     expect(actual).toEqual(expected);
   });
 });
@@ -198,7 +212,7 @@ describe('aliases', () => {
     const actual = importResolver.resolve(source, file);
     expect(actual).toEqual(expected);
   });
-  test('should resolve the correct alias', () => {
+  test('resolves the correct alias', () => {
     const source = 'foobar';
     const file = __filename;
 

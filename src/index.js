@@ -1,4 +1,4 @@
-import path from 'path';
+import { posix as path } from 'path';
 import fs from 'fs';
 import { isCore, sync as resolveSync } from 'resolve';
 
@@ -6,30 +6,43 @@ const defaultExtensions = ['.js', '.jsx'];
 export const interfaceVersion = 2;
 
 function findAliases() {
-  let currentPath = process.cwd();
-  let packagePath = path.join(currentPath, 'package.json');
+  let currentPath = path.resolve();
+  let packagePath = path.resolve(currentPath, 'package.json');
   while (!fs.existsSync(packagePath)) {
-    currentPath = path.join(currentPath, '..');
-    packagePath = path.join(currentPath, 'package.json');
+    currentPath = path.resolve(currentPath, '..');
+    packagePath = path.resolve(currentPath, 'package.json');
   }
   const packageJson = fs.readFileSync(packagePath);
   return JSON.parse(packageJson).alias || {};
 }
 
-function resolvePackageLevel(source, file) {
-  let packageDir = path.dirname(file);
-  let isFound = false;
-  do {
-    if (fs.existsSync(path.resolve(packageDir, 'node_modules'))) isFound = true;
-    else if (path.parse(packageDir).root === packageDir) return null;
-    // reached the root, just return null
-    else packageDir = path.join(packageDir, '..');
-  } while (!isFound);
-  return path.join(packageDir, source.substring(1)); // get rid of the tilde
+function resolvePackageLevel(source, file, rootDirectory) {
+  let packageDirectory = path.dirname(file);
+
+  for (;;) {
+    if (fs.existsSync(path.resolve(packageDirectory, 'node_modules'))) {
+      // found node_modules
+      break;
+    } else if (path.parse(packageDirectory).root === packageDirectory) {
+      // reached the drive root, just return null
+      return null;
+    }
+    packageDirectory = path.resolve(packageDirectory, '..');
+  }
+
+  return path.join(
+    // return rootDirectory if it is nested inside the packageDirectory
+    rootDirectory.startsWith(packageDirectory)
+      ? rootDirectory
+      : packageDirectory,
+    // Get rid of the tilde
+    source.slice(1),
+  );
 }
 
 export function resolve(source, file, possibleConfig = {}) {
   if (isCore(source)) return { found: true, path: null };
+
   const config = { rootDir: '', extensions: [], ...possibleConfig };
 
   const [startSource] = source.split('/');
@@ -40,19 +53,19 @@ export function resolve(source, file, possibleConfig = {}) {
 
   let newSource = source.replace(foundAlias, aliases[foundAlias]);
 
-  const rootDir = path.join(process.cwd(), config.rootDir);
+  const rootDirectory = path.resolve(config.rootDir);
 
   switch (newSource[0]) {
     case '.':
-      newSource = path.join(path.dirname(file), newSource);
+      newSource = path.resolve(path.dirname(file), newSource);
       break;
 
     case '~':
-      newSource = resolvePackageLevel(newSource, file) || rootDir;
+      newSource = resolvePackageLevel(newSource, file, rootDirectory);
       break;
 
     case '/':
-      newSource = path.join(rootDir, newSource);
+      newSource = path.join(rootDirectory, newSource);
       break;
 
     // no default
@@ -61,7 +74,7 @@ export function resolve(source, file, possibleConfig = {}) {
     return {
       found: true,
       path: resolveSync(newSource, {
-        basedir: process.cwd(),
+        basedir: path.resolve(),
         extensions: [...defaultExtensions, ...config.extensions],
       }),
     };
