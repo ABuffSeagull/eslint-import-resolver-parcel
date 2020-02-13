@@ -1666,27 +1666,27 @@
     validate-npm-package-license "^3.0.4"
     yargs-parser "^13.1.1"
 
-"@pika/plugin-build-node@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-build-node/-/plugin-build-node-0.8.1.tgz#fc71b6c3c81a15b32ffe22488dc5909b5713aaca"
-  integrity sha512-PzdxyJJZZPUAtUjWgO3c4EuHZmAFz5Jvvr6RU8Fflr1qqvfnvNLNlE9yhXvot3l7xMQORp+7/Fw0ZW84XMpzZA==
+"@pika/plugin-build-node@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-build-node/-/plugin-build-node-0.9.0.tgz#1bd1f3a77cd3a93f59e0a7dac3c281f841f48ffa"
+  integrity sha512-WBcMz34sKSOJV9wU82f+TZwm9TRt8v+LDn0kfiCaLg16EZxcysyMAg83m13oly+VrdaEFMcHA8Nm9dHF+oKDxQ==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
     "@babel/plugin-syntax-import-meta" "^7.2.0"
     "@babel/preset-env" "^7.2.3"
-    "@pika/types" "^0.8.1"
+    "@pika/types" "^0.9.0"
     babel-plugin-dynamic-import-node-babel-7 "^2.0.7"
     builtin-modules "^3.0.0"
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-standard-pkg@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-standard-pkg/-/plugin-standard-pkg-0.8.1.tgz#07e21cd64ab42e73476cfd8a3aed2e35c5aa0aff"
-  integrity sha512-ZtIUtssKxHVv1wPrzwvCKPXhNeBuJ4s13WCKO1PL7zJwLq8lvxQsLvi47b4mmImrgXU88tIoqDbR1hUx8SgifQ==
+"@pika/plugin-standard-pkg@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-standard-pkg/-/plugin-standard-pkg-0.9.0.tgz#ab6a0e3dbd4565742c5fd8199c5ce284c430bca0"
+  integrity sha512-bS3O2VEks/e8Gk27Z3eC5+P6tj9u1SC3FBiz42giGz8JnRgduKl9wwtVswIyhzfaBoUJ+EdIkWr6rkZpHfHC7A==
   dependencies:
-    "@pika/types" "^0.8.1"
+    "@pika/types" "^0.9.0"
     "@types/node" "^10.12.18"
     standard-pkg "^0.5.0"
 
@@ -1695,10 +1695,10 @@
   resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.6.0.tgz#eea0ed7db8c2593148a2e2b1bf4cfc25092a78dc"
   integrity sha512-/4ZSVQ94sseV8rCCzdKTpg4tOAL0++UZIaW2sCN4Qy087M/T3N0npgFxOAkLmyoYLs82NDXeq48W5TI1Ra5kNA==
 
-"@pika/types@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.8.1.tgz#ac24b9a73e6712d638cbc124b6b1d6a1ade51bb0"
-  integrity sha512-xQNGUA9CAHmbI6tO9weu088pX3PbrRgYZs68FXAqkJXodNyEy7Ju8LU191MZOS6MZreA1PElPd2evsgQ6Wl/cA==
+"@pika/types@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.9.0.tgz#f08e32f36d0ff9412a4f9ae5750588ca7106c437"
+  integrity sha512-xf0RPlnJeza9FGI4EOI1OfwDwntsh/irnVBFQ3Z4OC9PvmXeShwqZ7xhrO/KJ0Q7/bpJEYGAIsFsOQyTb2/yhQ==
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
