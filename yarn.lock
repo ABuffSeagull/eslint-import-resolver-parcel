@@ -1755,17 +1755,10 @@
     typed-inject "~2.1.1"
     typed-rest-client "~1.7.1"
 
-"@stryker-mutator/html-reporter@^2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@stryker-mutator/html-reporter/-/html-reporter-2.5.0.tgz#4698ec900d874e912364f0acf940b73111103f5c"
-  integrity sha512-QB83lsYnaG7AtaMCpcSigw4Db0TqaThDonA7XrlOC6aaAyQIf+4/eyp7wMrFBELSs4TFcQFtI3+LBZuKZTAkXw==
-  dependencies:
-    "@stryker-mutator/api" "^2.5.0"
-    "@stryker-mutator/util" "^2.5.0"
-    file-url "~3.0.0"
-    mkdirp "~0.5.1"
-    mutation-testing-elements "^1.0.2"
-    rimraf "~3.0.0"
+"@stryker-mutator/html-reporter@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@stryker-mutator/html-reporter/-/html-reporter-3.0.0.tgz#c99f34c6ac7724b14bd94bf11cd77d437ccec046"
+  integrity sha512-HaGgKlM3jvb0abisaXaLgEmP7k9dllUNwLiZjr1kH9IcSP9UZVJmj2dtQJH1Ae+rad1ku8VClDro5v1os9C54A==
 
 "@stryker-mutator/javascript-mutator@^2.5.0":
   version "2.5.0"
@@ -3533,11 +3526,6 @@ file-uri-to-path@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz#553a7b8446ff6f684359c445f1e37a05dacc33dd"
   integrity sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
-
-file-url@~3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/file-url/-/file-url-3.0.0.tgz#247a586a746ce9f7a8ed05560290968afc262a77"
-  integrity sha512-g872QGsHexznxkIAdK8UiZRe7SkE6kvylShU4Nsj8NvfvZag7S0QuQ4IgvPDkk75HxgjIVDwycFTDAgIiO4nDA==
 
 fill-range@^4.0.0:
   version "4.0.0"
@@ -5486,11 +5474,6 @@ multimap@^1.0.2:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/multimap/-/multimap-1.1.0.tgz#5263febc085a1791c33b59bb3afc6a76a2a10ca8"
   integrity sha512-0ZIR9PasPxGXmRsEF8jsDzndzHDj7tIav+JUmvIFB/WHswliFnquxECT/De7GR4yg99ky/NlRKJT82G1y271bw==
-
-mutation-testing-elements@^1.0.2:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/mutation-testing-elements/-/mutation-testing-elements-1.1.1.tgz#55c62067207ae38b7742cf4c93f96c9816a407a5"
-  integrity sha512-fnBf8pz1gW0MbnxSYPshJcghjzNz/h7WLxiF+Ux4wkBhwSs+YYl+IVaAdmITYylHvLzLkJOR9fuNcPNv5VgCKw==
 
 mutation-testing-metrics@^1.1.1:
   version "1.1.1"
