@@ -1,6 +1,6 @@
 {
   "name": "eslint-import-resolver-parcel",
-  "version": "1.10.3",
+  "version": "1.10.4",
   "description": "Parcel import resolution plugin for eslint-plugin-import.",
   "homepage": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel",
   "bugs": "https://github.com/ABuffSeagull/eslint-import-resolver-parcel/issues",
@@ -58,6 +58,13 @@
     "foobar": "jest"
   },
   "@pika/pack": {
-    "pipeline": [["@pika/plugin-standard-pkg"], ["@pika/plugin-build-node"]]
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ]
+    ]
   }
 }
