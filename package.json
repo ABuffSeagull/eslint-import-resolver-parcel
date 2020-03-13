@@ -48,7 +48,8 @@
   "resolutions": {
     "acorn": ">=6.4.1",
     "kind-of": ">=6.0.3",
-    "union-value": "^1.0.1"
+    "union-value": "^1.0.1",
+    "minimist": "^1.2.2"
   },
   "alias": {
     "folder-alias": "./test-folder",
