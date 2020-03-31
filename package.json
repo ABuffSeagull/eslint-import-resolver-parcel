@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "lint": "eslint --ext .js src/index.js test/ --fix",
-    "test": "jest",
+    "test": "snyk test && jest",
     "stryker": "stryker run",
     "version": "npx @pika/pack build"
   },
@@ -41,7 +41,8 @@
     "eslint-plugin-unicorn": "^18.0.0",
     "jest": "^25.1.0",
     "np": "^6.2.0",
-    "prettier": "^2.0.2"
+    "prettier": "^2.0.2",
+    "snyk": "^1.305.0"
   },
   "dependencies": {
     "resolve": "^1.15.1"
