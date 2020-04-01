@@ -1,7 +1,7 @@
 # eslint-import-resolver-parcel
 
 [![Build Status](https://travis-ci.com/ABuffSeagull/eslint-import-resolver-parcel.svg?branch=master)](https://travis-ci.com/ABuffSeagull/eslint-import-resolver-parcel)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ABuffSeagull/eslint-import-resolver-parcel.svg)](https://greenkeeper.io/)
+[![Known Vulnerabilities](https://snyk.io/test/github/abuffseagull/eslint-import-resolver-parcel/badge.svg)](https://snyk.io/test/github/abuffseagull/eslint-import-resolver-parcel)
 
 ### About
 
