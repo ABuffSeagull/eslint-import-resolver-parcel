@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "lint": "eslint --ext .js src/index.js test/ --fix",
-    "test": "snyk test && jest",
+    "test": "jest",
     "stryker": "stryker run",
     "version": "npx @pika/pack build"
   },
