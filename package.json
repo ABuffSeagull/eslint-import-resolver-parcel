@@ -30,7 +30,7 @@
     "@stryker-mutator/core": "^3.0.2",
     "@stryker-mutator/javascript-mutator": "^3.0.2",
     "@stryker-mutator/jest-runner": "^3.0.2",
-    "babel-jest": "^25.1.0",
+    "babel-jest": "^25.2.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.1.0",
     "eslint-config-prettier": "^6.10.1",
@@ -39,7 +39,7 @@
     "eslint-plugin-jest": "^23.8.2",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-unicorn": "^18.0.0",
-    "jest": "^25.1.0",
+    "jest": "^25.2.0",
     "np": "^6.2.0",
     "prettier": "^2.0.2",
     "snyk": "^1.305.0"
