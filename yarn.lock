@@ -1969,13 +1969,22 @@
     surrial "^2.0.1"
     tslib "~1.11.1"
 
-"@stryker-mutator/core@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@stryker-mutator/core/-/core-3.0.2.tgz#20cea699da8238cb458f2115547ba32e2155a29d"
-  integrity sha512-SSupRqqEMfucHk4oaWdpJQ9BE6UPUyPKRzjKT8KSBqYYlMIwNQt+De6LkPbbbUABtV0+1h0MTTk2Rr+69zpNOg==
+"@stryker-mutator/api@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@stryker-mutator/api/-/api-3.1.0.tgz#7eb6f1e1f2af17ff0425c6aa0d4d244ca822e972"
+  integrity sha512-HhfcATYxcIWpzOZ2J8MiqUkNyipF4QvJi8aDxI2r0Zc2aLkJZWj/VMrOuCVX/5AJqCpAJXSeVk/A+z2A15fQEg==
   dependencies:
-    "@stryker-mutator/api" "^3.0.2"
-    "@stryker-mutator/util" "^3.0.2"
+    mutation-testing-report-schema "~1.3.0"
+    surrial "~2.0.2"
+    tslib "~1.11.1"
+
+"@stryker-mutator/core@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@stryker-mutator/core/-/core-3.1.0.tgz#8e0842534c75359832a5b67852bbdb0716d9124c"
+  integrity sha512-riO2ccmOklvR5qXVrcEtUBqkryNY27lL85ZkFfcnPtOon0y1XtDClLz/DogLr4FH414RqHBL5ZMjrk0Bf/sKug==
+  dependencies:
+    "@stryker-mutator/api" "^3.1.0"
+    "@stryker-mutator/util" "^3.1.0"
     chalk "~3.0.0"
     commander "~4.1.0"
     file-url "~3.0.0"
@@ -1993,7 +2002,7 @@
     rimraf "~3.0.0"
     rxjs "~6.5.1"
     source-map "~0.7.3"
-    surrial "^2.0.1"
+    surrial "~2.0.2"
     tree-kill "~1.2.0"
     tslib "~1.11.1"
     typed-inject "~2.1.1"
@@ -2018,10 +2027,10 @@
     "@stryker-mutator/api" "^3.0.2"
     semver "~6.3.0"
 
-"@stryker-mutator/util@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@stryker-mutator/util/-/util-3.0.2.tgz#5af98ce29f3f2b1cdf5cd4cc0f1a01902ea8bfed"
-  integrity sha512-XOSkQrMPQTXy2wxCKkHwNgwVmo2C/2vhJANx/KKbcX6cJ6CuX2y3cPZwQynSBLSVJ0pw0Puu/zzwve6i0tHxtQ==
+"@stryker-mutator/util@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@stryker-mutator/util/-/util-3.1.0.tgz#6b1989a3c50eee76579b1ff20cbe5e62717a141a"
+  integrity sha512-9u5cekP4VfYOdrBoRIJeYiVXiW/5EQfwPe029GFNn07OiSDsikiQQDI23xzew3DzDFTzQfN1dsPgqjB/r5kolw==
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
@@ -8672,6 +8681,11 @@ surrial@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/surrial/-/surrial-2.0.1.tgz#25d74e51601bac90e56becbe7e071d7f953d59a3"
   integrity sha512-s1LQlqY4am79aFsRLFtpqirqqqIODxdVX8RlphoYktb/9GMbMBqH15UraSoyGt5S5UEvpUzWaY0LcEhrvCh12g==
+
+surrial@~2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/surrial/-/surrial-2.0.2.tgz#739afbc9821ebf6aa4e3e9f32abf0021b73ef2b3"
+  integrity sha512-YQ0XyrdBI8Kx10lIK81zOGXdGtc0P+3FTqEtCdaKzfEJKJWDju2QPp+XhzihmN2KOTRDtkKSyQQXZHYP+SqapA==
 
 symbol-observable@1.0.1:
   version "1.0.1"
