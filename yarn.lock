@@ -1969,6 +1969,15 @@
     surrial "^2.0.1"
     tslib "~1.11.1"
 
+"@stryker-mutator/api@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@stryker-mutator/api/-/api-3.1.0.tgz#7eb6f1e1f2af17ff0425c6aa0d4d244ca822e972"
+  integrity sha512-HhfcATYxcIWpzOZ2J8MiqUkNyipF4QvJi8aDxI2r0Zc2aLkJZWj/VMrOuCVX/5AJqCpAJXSeVk/A+z2A15fQEg==
+  dependencies:
+    mutation-testing-report-schema "~1.3.0"
+    surrial "~2.0.2"
+    tslib "~1.11.1"
+
 "@stryker-mutator/core@^3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@stryker-mutator/core/-/core-3.0.2.tgz#20cea699da8238cb458f2115547ba32e2155a29d"
@@ -1999,15 +2008,15 @@
     typed-inject "~2.1.1"
     typed-rest-client "~1.7.1"
 
-"@stryker-mutator/javascript-mutator@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@stryker-mutator/javascript-mutator/-/javascript-mutator-3.0.2.tgz#3d5c101a8e6a7ac2de58d60b1cda6ac45937f0c7"
-  integrity sha512-05vP1WKdFN1C9pklPjxI5L15sxieAquln1NtJcjEHF3Uiu49LwmQMfc7U9VTG+lIWEHGiF9r4neVvopCAH47xA==
+"@stryker-mutator/javascript-mutator@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@stryker-mutator/javascript-mutator/-/javascript-mutator-3.1.0.tgz#fea5f92a4bed965fe03518870c88435202672cd3"
+  integrity sha512-0UUp9f8vnbIo/5lWm91OZGkcb2x8XdlE38AZbrJmYNqENh11ZoZywoKpYyn/sIpmp2CDpAKY+CxWCr8yiFTiZA==
   dependencies:
     "@babel/generator" "~7.8.3"
     "@babel/parser" "~7.8.3"
     "@babel/traverse" "~7.8.3"
-    "@stryker-mutator/api" "^3.0.2"
+    "@stryker-mutator/api" "^3.1.0"
     tslib "~1.11.1"
 
 "@stryker-mutator/jest-runner@^3.0.2":
@@ -8672,6 +8681,11 @@ surrial@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/surrial/-/surrial-2.0.1.tgz#25d74e51601bac90e56becbe7e071d7f953d59a3"
   integrity sha512-s1LQlqY4am79aFsRLFtpqirqqqIODxdVX8RlphoYktb/9GMbMBqH15UraSoyGt5S5UEvpUzWaY0LcEhrvCh12g==
+
+surrial@~2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/surrial/-/surrial-2.0.2.tgz#739afbc9821ebf6aa4e3e9f32abf0021b73ef2b3"
+  integrity sha512-YQ0XyrdBI8Kx10lIK81zOGXdGtc0P+3FTqEtCdaKzfEJKJWDju2QPp+XhzihmN2KOTRDtkKSyQQXZHYP+SqapA==
 
 symbol-observable@1.0.1:
   version "1.0.1"
