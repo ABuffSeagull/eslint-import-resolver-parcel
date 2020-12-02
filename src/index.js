@@ -1,4 +1,4 @@
-import { posix as path } from 'path';
+import path from 'path';
 import fs from 'fs';
 import { isCore, sync as resolveSync } from 'resolve';
 
